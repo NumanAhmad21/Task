@@ -1,0 +1,23 @@
+<section class="cr-services-container">
+    <div class="cr-services">
+        <div class="cr-services-head-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <span>Lorem ipsum dolor sit amet</span>
+        </div>
+        <div class="cr-all-services">
+            <div class="cr-card" *ngFor="let service of services">
+                <div class="cr-card-logo">
+                    <img src="assets/images/{{service.logo}}" />
+                </div>
+                <div class="cr-card-body">
+                    <p>{{ service.title }}</p>
+                    <span>{{ service.description }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="cr-check-offer">
+            <a href="javascript:void(0)">CHECK OUR OFFER</a>
+        </div>
+    </div>
+
+</section>

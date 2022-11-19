@@ -1,0 +1,74 @@
+@import '../../../assets/scss/base/variables.scss';
+@import '../../../assets/scss/base/mixins.scss';
+@import '../../../assets/scss/base/responsive.scss';
+section{
+    background-color: $gallery-background;
+    width: $full-width-container;
+    margin: $container-center;
+    
+    // mixin
+    @include flex_center();
+    .cr-testimonial{
+        width: $container-width;
+        @include flex_center();
+        @include lg{
+            flex-direction: column;
+        }
+        @include sm{
+            flex-direction: column;
+            width: $full-width-container;
+        }
+        .cr-testimonial-left{
+            flex: 1;
+           .cr-test-image-{
+            background-image: $testimonial-bg;
+            background-size: contain;
+            margin: 30px 0 0 0;
+            background-repeat: no-repeat;
+            img{
+                margin: -35px 0 0 12%;
+                @include sm{
+                    margin: 0;
+                    width: 100%;
+                }
+            }
+            
+            }
+        }
+        .cr-testimonial-right{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 30px 0 0 100px;
+            @include sm{
+                padding: 2rem;
+                margin: 0;
+            }
+            .cr-testimonial-title{
+                @include mainHeadin(); 
+                color: $secondary-color;
+                font-size: 35px;
+                @include sm{
+                    font-size: 28px;
+                }
+            }
+            p{
+                @include content();
+                font-size: 16px;
+                @include sm{
+                    font-size: 12px;
+                }
+            }
+            .cr-testimonial-profile{
+                span{
+                    font-size: 16px;
+                    color: $black-color;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

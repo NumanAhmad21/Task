@@ -1,0 +1,49 @@
+<header class="cr-header-container">
+    <div class="" id="cr-overlay-container"> </div>
+    <div class="cr-header-">
+        <nav class="cr-nav-container">
+            <div class="cr-nav">
+                <div class="cr-left-menu">
+                    <i class="fa-sharp fa-solid fa-bars"></i>
+                </div>
+                <div class="cr-mid-container">
+                    <div class="cr-content">
+                        <h3>CRIOS</h3>
+                        <p>FREE PSD TEMPLATE</p>
+                    </div>
+                </div>
+                <div class="cr-search">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </nav>
+        <section #menu class="cr-model-container menu" *ngIf="isMenuOpen" >
+            <div class="cr-model">
+                <div class="cr-model-logo">
+                    <div class="cr-model-header">
+                        <img src="assets/images/logo.png" />
+                    </div>
+                </div>
+                <div class="cr-model-body">
+                    <span>Thanks for downloading our template!</span>
+                    <p>Hope that you enjoy it well! Check also our site</p>
+                    <a href="javascript:void(0)" >www.symu.co</a>
+                </div>
+            </div>
+        </section> 
+        <section class="cr-heaer-content">
+           <div class="cr-h-content-body">
+            <div class="cr-header-contenet-body-container"> 
+                <h2>Simple PSD template with cool stuff</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+           <div class="cr-explore-button">
+                <a href="javascript:void(0)" #toggleMenu (click)="showMenu('#cr-overlay-container')">EXPLORE TEMPLATE</a>
+           </div>
+          </div>
+        </section>  
+        
+     </div>
+    <div class="cr-h-bottom-img-container">
+    </div> 
+</header>

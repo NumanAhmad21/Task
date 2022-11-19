@@ -1,0 +1,68 @@
+@import '../../../assets/scss/base/variables.scss';
+@import '../../../assets/scss/base/mixins.scss';
+@import '../../../assets/scss/base/responsive.scss';
+footer{
+    width: $full-width-container;
+    
+    .cr-footer-bg{
+        background-image: $f-background-image;
+        background-repeat: $repeat;
+        background-size: cover;
+        height: $container-height;
+        @include lg{
+            height: 50vh;
+            background-size: contain;
+            background-position: bottom;
+        }
+        @include sm{
+            height: 35vh;
+            width: 100%;
+            background-size: contain;
+            background-position: bottom;
+        }
+    }
+    .cr-footer{
+        height: 40vh;
+        @include lg{
+            height: 20vh;
+        }
+        .cr-footer-top{
+            @include flex_center();
+            flex-direction: column;
+            gap: 50px;
+            padding: 5rem 0;
+            width: 100%;  
+            text-align: center;
+            @include sm{
+                padding: 0;
+            }     
+            .cr-f-content-body{
+                @include sm{
+                    margin: 2rem;
+                }
+                span{
+                    @include mainHeadin();
+                    @include sm{
+                        font-size: 32px;
+                    }
+                }
+                p{
+                    @include content();
+                    @include sm{
+                        font-size: 14px;
+                    }
+                }
+            }
+           .cr-footer-btn{
+                a{
+                    @include button();
+                    @include sm{
+                        font-size: 12px;
+                    }
+                }
+                
+            }
+           
+        }
+    }
+}
