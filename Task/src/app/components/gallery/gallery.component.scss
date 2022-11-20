@@ -1,0 +1,106 @@
+    @import '../../../assets/scss/base/variables.scss';
+    @import '../../../assets/scss/base/mixins';
+    @import '../../../assets/scss/base/responsive.scss';
+    section{
+    width: $full-width-container;
+    height: auto;
+    .cr-gallery{
+        display: flex;
+        flex-direction: column;
+        .cr-gallery-top {
+            display: flex;
+            justify-content: space-between;
+            @include lg{
+                flex-direction: column;
+            }
+            @include sm{
+                flex-direction: column;
+            }
+            .cr-gallery-top-pic {
+                flex: 1;
+                img{
+                    width: $full-width-container;
+                }
+            }
+            .cr-gallery-top-content {
+                flex: 1;
+                background: $gallery-background;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .cr-gallery-content-desc{
+                    width: $full-width-container;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    padding: 2rem;
+                    span{
+                        @include mainHeadin();
+                        @include sm{
+                            font-size: 32px;
+                        }
+                    }
+                    p{
+                        @include content();
+                        text-align: justify;
+                        width: 80%;
+                        @include sm{
+                            width: 100%;
+                            text-align: center;
+                            font-size: 14px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .cr-gallery-bottom {
+            display: flex;
+            flex-direction: row-reverse;
+            @include lg{
+                flex-direction: column;
+            }
+            @include sm{
+                flex-direction: column;
+            }
+            .cr-gallery-bottom-pic {
+                flex: 1;
+                img {
+                    width: 100%;
+                }
+            }
+            .cr-gallery-bottom-content {
+                flex: 1;
+                background: $gallery-background;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .cr-bottom-content-desc {
+                    width: $full-width-container;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    padding: 2rem;
+                    position: relative;
+                    z-index: 20;
+                    span{
+                        @include mainHeadin();
+                        @include sm{
+                            font-size: 32px;
+                        }
+                    }
+                    p{
+                        @include content();
+                        text-align: justify;
+                        width: 80%;
+                        @include sm{
+                            width: 100%;
+                            text-align: center;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

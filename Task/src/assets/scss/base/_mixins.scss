@@ -1,0 +1,56 @@
+@import './variables.scss'; 
+@mixin flex_center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin headerIcon(){
+    height: 57px;
+    width: 57px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 1px 1px 15px #dae5ef;
+    cursor: pointer;
+    font-size: 16px;
+}
+@mixin  button() {
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    background: #ffffff;
+    padding: 17px 57px 18px 25px;
+    border-radius: 15px 20px;
+    line-height: 100px;
+    outline: none;
+    border: none;
+    color:$primary-color;
+    box-shadow: 1px 1px 15px #dae5ef;
+}
+@mixin  buttonModel() {
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    background: $secondary-color;
+    padding: 17px 57px 18px 25px;
+    border-radius: 5px 7px;
+    color: #ffffff;
+    line-height: 100px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 15px #dae5ef;
+}
+@mixin mainHeadin(){
+    font-size: $heading-size;
+    font-weight: 500;
+    line-height: 40px;
+    color: $black-color;
+}
+@mixin content(){
+    font-size: 18px;
+    font-weight: 400;
+    color: $text-color;
+    line-height: 32px;
+}

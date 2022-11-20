@@ -1,0 +1,99 @@
+@import '../../../assets/scss/base/variables.scss';
+@import '../../../assets/scss/base/mixins.scss';
+@import '../../../assets/scss/base/responsive.scss';
+section{
+    width: $container-width;
+    margin: $container-center;
+    @include sm{
+        width: 100%;
+    }
+    @include lg{
+        width: 100%;
+   }
+    .cr-services {
+        display: flex;
+        flex-direction: column;
+        gap: 75px;
+        padding: 50px 0;
+        @include lg{
+            gap: 20px;
+       }
+        @include sm{
+            gap: 20px;
+        }
+        .cr-check-offer {
+            text-align: center;
+            a{
+                @include button();
+                @include sm{
+                    font-size: 12px;
+                }
+            }
+        }
+        .cr-services-head-content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            @include sm{
+                padding: 2rem;
+                text-align: center
+            }
+            p{
+                @include content();
+                @include sm{
+                    font-size: 12px;
+                }
+            }
+            span{
+                @include mainHeadin();
+                @include sm{
+                    font-size: 32px;
+                }
+            }
+        }
+        .cr-all-services{
+            width: $full-width-container;
+            display: flex;
+            justify-content: space-between;
+            @include lg{
+                width: 95%;
+                margin: 3%;
+            }
+            @include sm{
+                flex-wrap: wrap;
+                gap: 30px;
+
+            }
+            .cr-card {
+                @include sm{
+                    width: 100%;
+                }
+                width: 22%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                .cr-card-body{
+                    text-align:center;
+                    p{
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $black-color;
+                        @include sm{
+                            font-size: 14px;
+                        }
+                    }
+                    span{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $text-color;
+                        @include sm{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
